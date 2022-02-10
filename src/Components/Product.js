@@ -1,5 +1,5 @@
 import React from 'react';
-import './Product.css'
+import '../Product.css'
 
 function product({title,img,price,rating}) {
   return (
@@ -17,7 +17,7 @@ function product({title,img,price,rating}) {
 
 .fill()
 .map((_,i) => (
-  <p>⭐</p>
+  <span>⭐</span>
 
 ))}
 

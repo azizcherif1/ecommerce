@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css'
+import '../Home.css'
 import Product from './Product';
 
 function Home() {
@@ -20,8 +20,8 @@ function Home() {
         title={"VALORANT CARD 25$"}
         price={"80DT"}
       img="https://www.ubuy.com.pl/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFWRTNPQWtFNkwuX1NMMTUwMF8uanBn.jpg"
-         rating={4}
-         />
+         rating={5}
+         alt =""/>
 
 <Product
 id="1235"
@@ -40,7 +40,7 @@ id="1235"
         title={"GOOGLE PLAY GIFT CARD 50$"}
         price={"150DT"}
       img="https://www.nicepng.com/png/detail/10-104185_google-play-gift-card-google-play-cards-png.png"
-         rating={5}
+         rating={2}
          />
          <Product
         id="12321111"
@@ -55,7 +55,7 @@ id="1235"
         title={"ROCKET LEAUGE"}
         price={"60DT"}
       img="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Rocket_League_coverart.jpg/800px-Rocket_League_coverart.jpg"
-         rating={4}
+         rating={3}
          />
 
           </div>
