@@ -3,15 +3,18 @@ import '../Product.css'
 
 function product({title,img,price,rating}) {
   return (
-    <div className='product'>
+  
+    
+ 
+
+   <div className='product'>
+  
+
     <div className='product_info'>
 <p> {title}</p>
-
   <p className='product_price'>
-
-      <strong>{price}</strong>
- 
-</p>
+  <strong>{price}</strong>
+ </p>
 <div className='product_rating'>
 { Array(rating)
 
@@ -23,17 +26,19 @@ function product({title,img,price,rating}) {
 
 </div>
 
+ </div>
+  {/* <Link className='productCard' to={'/product/${id}'}>   </Link> */}
 
-    </div>
+ 
 
-    <img src={img} alt=""/>
-   
-  
-  
-  <button>Ajout au panier</button>
+ <img   src={img} alt=""/>
+ <button>Ajout au panier</button>
 
 
-</div>);
+  </div>);
+
+
+
 
 }
 

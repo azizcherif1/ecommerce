@@ -1,17 +1,45 @@
 import React, { useState } from 'react';
 import '../Login.css'
 import {Link} from 'react-router-dom';
+import { auth } from '../firebase';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { Message } from '@mui/icons-material';
 
 
 function Login() {
+  const history = useHistory();
   const[email,setEmail]=useState('');
   const[password,setPassword]=useState('');
   const signIn = e=> {
-    e.preventDegault();
+    e.preventDefault();
+  auth.signInWithEmailAndPassword(email,password)
+  .then (auth => {
+    history.push('/')
 
-    
-
+  })
+  .catch(error => alert(error,Message))
   }
+
+
+
+    const signup = e=> {
+      e.preventDefault();
+
+      auth.createUserWithEmailAndPassword(email,password)
+      .then((auth)    => {
+      // t3adet
+    
+      console.log(auth);
+      if (auth)
+      {
+        history.push('/')
+      }
+    })
+    
+    .catch(error=> alert(error,Message))
+    }
+
+
   return (
     
   <div className='login'>
@@ -32,7 +60,7 @@ function Login() {
 <button type='submit' onClick={signIn} className='button_sign'>Sign in</button>
 </form>
 
-<button className='login_register'>Create your KeySHOP Account</button>
+<button onClick={signup} className='login_register'>Create your KeySHOP Account</button>
 
 
 
