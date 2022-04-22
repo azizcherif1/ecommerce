@@ -20,10 +20,7 @@ function App() {
         <Header/>
         <Home/>
       </Route>
-      <Route exact path="/checkout">
-        <Header/>
-   <h1>I'm CHECKOUT PAGEEEEEEEEE</h1>
-      </Route>
+     
 
       <Route exact path="/login">
         
